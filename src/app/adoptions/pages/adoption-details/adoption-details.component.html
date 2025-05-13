@@ -1,0 +1,66 @@
+<!--
+  Autor: @leccapedro
+  Descripción: Esta vista muestra los detalles completos de una mascota seleccionada.
+  Incluye información general, historia de rescate, estado de salud y registro de vacunación.
+-->
+
+<!-- Loader mientras se obtienen los datos -->
+<div *ngIf="loading">Cargando información de la mascota...</div>
+
+<!-- Botón para volver -->
+<a routerLink="/adoptions" class="back-button">← Volver a adopciones</a>
+
+<!-- Contenedor principal -->
+<div *ngIf="!loading && pet" class="pet-details-container">
+
+  <!-- Imagen de la mascota -->
+  <div class="image-section">
+    <img [src]="pet.imageUrl" [alt]="pet.name" />
+  </div>
+
+  <!-- Información detallada -->
+  <div class="info-section">
+    <h2>{{ pet.name }}</h2>
+
+    <!-- Detalles básicos -->
+    <p><strong>Especie:</strong> {{ pet.species }}</p>
+    <p><strong>Raza:</strong> {{ pet.breed }}</p>
+    <p><strong>Edad:</strong> {{ pet.age }} años</p>
+    <p><strong>Género:</strong> {{ pet.gender }}</p>
+    <p><strong>Tamaño:</strong> {{ pet.size }}</p>
+    <p><strong>Peso:</strong> {{ pet.weight }}</p>
+    <p><strong>Largo de pelo:</strong> {{ pet.hair }}</p>
+    <p><strong>Nivel de actividad:</strong> {{ pet.activity }}</p>
+    <p><strong>Ubicación:</strong> {{ pet.location }}</p>
+
+    <hr />
+
+    <!-- Descripción y historia -->
+    <p><strong>Descripción:</strong> {{ pet.description }}</p>
+    <p><strong>Historia de rescate:</strong> {{ pet.rescue_story }}</p>
+    <p><strong>Rescatado por:</strong> {{ pet.rescued_by }}</p>
+    <p><strong>Estado de salud:</strong> {{ pet.health }}</p>
+
+    <hr />
+
+    <!-- 💉 Registro de vacunación -->
+    <div *ngIf="pet.vaccination_record && pet.vaccination_record.length">
+      <h3>Historial de Vacunación</h3>
+      <ul>
+        <li *ngFor="let registro of pet.vaccination_record">
+          <strong>Dosis {{ registro.doses }}:</strong>
+          <span>{{ registro.date }}</span><br />
+          <em>Vacunas:</em> {{ registro.vaccines.join(', ') }}
+        </li>
+      </ul>
+    </div>
+
+    <!-- Botón de solicitud -->
+    <button class="adopt-button">Solicitar adopción</button>
+  </div>
+</div>
+
+<!-- En caso no se encuentre la mascota -->
+<div *ngIf="!loading && !pet">
+  <p>Mascota no encontrada.</p>
+</div>
