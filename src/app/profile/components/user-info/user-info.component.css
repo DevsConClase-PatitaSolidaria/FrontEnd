@@ -1,0 +1,103 @@
+.user-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 16px;
+  width: 320px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: white;
+}
+
+.user-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  gap: 12px;
+}
+
+.profile-pic {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ff6b6b;
+}
+
+.user-role {
+  background-color: #ff6b6b;
+  color: white;
+  padding: 3px 8px;
+  border-radius: 12px;
+  font-size: 0.7rem;
+  margin-left: auto;
+}
+
+.user-info {
+  margin-bottom: 15px;
+}
+
+.user-info p {
+  margin: 8px 0;
+  color: #555;
+}
+
+.user-bio {
+  font-style: italic;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  margin-top: 10px !important;
+}
+
+.preferences-container, .methods-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.preference-tag, .method-tag {
+  background-color: #ff6b6b;
+  color: white;
+  padding: 4px 12px;
+  border-radius: 16px;
+  font-size: 0.8rem;
+  display: inline-block;
+}
+
+.method-tag {
+  background-color: #4CAF50;
+}
+
+.role-specific {
+  background-color: #f0f8ff;
+  padding: 12px;
+  border-radius: 8px;
+  margin: 12px 0;
+}
+
+.role-specific p {
+  margin: 6px 0;
+  color: #333;
+}
+
+.notifications {
+  margin-top: 15px;
+}
+
+.notification-item {
+  background-color: #fff8e1;
+  padding: 8px 12px;
+  border-radius: 6px;
+  margin: 8px 0;
+  border-left: 3px solid #ffc107;
+}
+
+h4 {
+  color: #333;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
