@@ -1,0 +1,56 @@
+<div class="user-card">
+  <!-- Encabezado con foto de perfil -->
+  <div class="user-header">
+    <img *ngIf="user.profilePic" [src]="user.profilePic" alt="Foto de perfil" class="profile-pic">
+    <h3>{{ user.name }}</h3>
+    <span class="user-role">{{ user.role | titlecase }}</span>
+  </div>
+
+  <!-- Información básica -->
+  <div class="user-info">
+    <p><strong>📍 Ubicación:</strong> {{ user.address }}, Lima</p>
+    <p><strong>✉️ Email:</strong> {{ user.email }}</p>
+
+    <!-- Bio solo si existe -->
+    <p *ngIf="user.bio" class="user-bio">{{ user.bio }}</p>
+  </div>
+
+  <!-- Preferencias mejoradas -->
+  <div class="preferences" *ngIf="user.preferences?.length">
+    <h4>🔍 Busca/Ofrece:</h4>
+    <div class="preferences-container">
+      <span class="preference-tag" *ngFor="let pref of user.preferences">
+        {{ pref }}
+      </span>
+    </div>
+  </div>
+
+  <!-- Campos específicos por rol -->
+  <div class="role-specific" *ngIf="user.role === 'refugio'">
+    <p><strong>🏠 Capacidad:</strong> {{ user.capacity }} animales</p>
+    <p><strong>🐾 Disponibles:</strong> {{ user.animalsAvailable }}</p>
+  </div>
+
+  <div class="role-specific" *ngIf="user.role === 'adoptante'">
+    <p><strong>🏡 Tipo de vivienda:</strong> {{ user.homeType }}</p>
+    <p><strong>📌 Experiencia previa:</strong> {{ user.previousExperience || 'Ninguna' }}</p>
+  </div>
+
+  <!-- Notificaciones -->
+  <div class="notifications" *ngIf="user.notifications?.length">
+    <h4>🔔 Notificaciones:</h4>
+    <div class="notification-item" *ngFor="let notif of user.notifications">
+      <p>{{ notif }}</p>
+    </div>
+  </div>
+
+  <!-- Métodos de pago -->
+  <div class="payment-methods" *ngIf="user.paymentMethods?.length">
+    <h4>💳 Acepta:</h4>
+    <div class="methods-container">
+      <span class="method-tag" *ngFor="let method of user.paymentMethods">
+        {{ method }}
+      </span>
+    </div>
+  </div>
+</div>
