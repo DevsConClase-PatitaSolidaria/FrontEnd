@@ -7,17 +7,19 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
+import { TranslateModule } from '@ngx-translate/core';
 import { AdoptionEntity } from '../../model/adoption.entity';
 import { AdoptionsService } from '../../services/adoptions.service';
-import { RouterModule } from '@angular/router';
 
 @Component({
   standalone: true,
   selector: 'app-adoption-details',
   templateUrl: './adoption-details.component.html',
   styleUrls: ['./adoption-details.component.css'],
-  imports: [CommonModule, RouterModule]
+  imports: [CommonModule, RouterModule, TranslateModule]
 })
+
 export class AdoptionDetailsComponent implements OnInit {
   pet!: AdoptionEntity | undefined;
   loading = true;
