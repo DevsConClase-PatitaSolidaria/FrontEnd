@@ -1,0 +1,78 @@
+{
+  "LANG": {
+    "EN": "English",
+    "ES": "Spanish"
+  },
+
+  "ADOPTION_CARD": {
+    "SPECIES": "Species",
+    "BREED": "Breed",
+    "AGE": "Age",
+    "YEARS": "years",
+    "GENDER": "Gender",
+    "LOCATION": "Location",
+    "ADOPT_BUTTON": "Request adoption"
+  },
+
+  "FILTERS": {
+    "TITLE": "Filter by",
+    "ACTIVITY": "Activity Level",
+    "WEIGHT": "Weight",
+    "SIZE": "Size",
+    "HAIR_LENGTH": "Hair Length",
+    "GENDER": "Gender",
+    "AGE": "Age",
+    "LOW": "Low",
+    "MEDIUM": "Medium",
+    "HIGH": "High",
+    "LIGHT": "Light",
+    "HEAVY": "Heavy",
+    "SMALL": "Small",
+    "LARGE": "Large",
+    "SHORT": "Short",
+    "LONG": "Long",
+    "MALE": "Male",
+    "FEMALE": "Female",
+    "PUPPY": "Puppy",
+    "ADULT": "Adult",
+    "SENIOR": "Senior",
+    "ALL": "All",
+    "CLEAR": "Clear filters"
+  },
+
+  "DETAILS": {
+    "LOADING": "Loading pet information...",
+    "BACK": "Back to adoptions",
+    "SPECIES": "Species",
+    "BREED": "Breed",
+    "AGE": "Age",
+    "YEARS": "years",
+    "GENDER": "Gender",
+    "SIZE": "Size",
+    "WEIGHT": "Weight",
+    "HAIR": "Hair length",
+    "ACTIVITY": "Activity level",
+    "LOCATION": "Location",
+    "DESCRIPTION": "Description",
+    "RESCUE_STORY": "Rescue story",
+    "RESCUED_BY": "Rescued by",
+    "HEALTH": "Health status",
+    "VACCINATION_TITLE": "Vaccination Record",
+    "DOSE": "Dose",
+    "VACCINES": "Vaccines",
+    "ADOPT_BUTTON": "Request adoption",
+    "NOT_FOUND": "Pet not found."
+  },
+
+  "LIST": {
+    "SEARCH_PLACEHOLDER": "Search by name...",
+    "SORT_BY": "Sort by:",
+    "SORT_SELECT": "-- Select --",
+    "SORT_NAME_ASC": "Name (A-Z)",
+    "SORT_NAME_DESC": "Name (Z-A)",
+    "SORT_AGE_ASC": "Age (youngest first)",
+    "SORT_AGE_DESC": "Age (oldest first)",
+    "NO_PETS": "No pets available.",
+    "LOADING": "Loading pets..."
+  }
+}
