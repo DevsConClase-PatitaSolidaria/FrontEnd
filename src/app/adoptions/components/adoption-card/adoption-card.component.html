@@ -13,13 +13,15 @@
     <h3>{{ pet.name }}</h3>
 
     <!-- Detalles clave de la mascota -->
-    <p><strong>Especie:</strong> {{ pet.species }}</p>
-    <p><strong>Raza:</strong> {{ pet.breed }}</p>
-    <p><strong>Edad:</strong> {{ pet.age }} años</p>
-    <p><strong>Género:</strong> {{ pet.gender }}</p>
-    <p><strong>Ubicación:</strong> {{ pet.location }}</p>
+    <p><strong>{{ 'ADOPTION_CARD.SPECIES' | translate }}:</strong> {{ pet.species }}</p>
+    <p><strong>{{ 'ADOPTION_CARD.BREED' | translate }}:</strong> {{ pet.breed }}</p>
+    <p><strong>{{ 'ADOPTION_CARD.AGE' | translate }}:</strong> {{ pet.age }} {{ 'ADOPTION_CARD.YEARS' | translate }}</p>
+    <p><strong>{{ 'ADOPTION_CARD.GENDER' | translate }}:</strong> {{ pet.gender }}</p>
+    <p><strong>{{ 'ADOPTION_CARD.LOCATION' | translate }}:</strong> {{ pet.location }}</p>
 
-    <!-- Botón para solicitar adopción (sin funcionalidad aún) -->
-    <a [routerLink]="['/adoptions', pet.id]" class="adopt-btn">Solicitar adopción</a>
+    <!-- Botón para solicitar adopción -->
+    <a [routerLink]="['/adoptions', pet.id]" class="adopt-btn">
+      {{ 'ADOPTION_CARD.ADOPT_BUTTON' | translate }}
+    </a>
   </div>
 </div>
