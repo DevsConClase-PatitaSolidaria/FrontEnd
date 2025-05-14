@@ -7,7 +7,7 @@
 
 import { Component, EventEmitter, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { AdoptionFilter } from '../../model/adoption-filter.model';
+import { AdoptionFilter } from '../../model/adoption-filter-model';
 
 @Component({
   standalone: true,
