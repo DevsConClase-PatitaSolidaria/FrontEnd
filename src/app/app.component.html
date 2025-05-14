@@ -1,0 +1,41 @@
+<mat-toolbar [style.background-color]="'black'" color="primary">
+  <button mat-icon-button (click)="sidenav.toggle()">
+    <mat-icon *ngIf="sidenav.opened" style="color: white;">close</mat-icon>
+    <mat-icon *ngIf="!sidenav.opened" style="color: white;">apps</mat-icon>
+  </button>
+
+  <!-- Imagen en lugar del texto -->
+  <img src="https://i.imgur.com/iVe94bK.png" alt="PatitaSolidaria Logo" style="height: 50px; margin-left: 20px;">
+
+  <a mat-button [routerLink]="['/pets']" style="margin-left: 20px; color: white;">{{ 'Inicio' | translate }}</a>
+
+  <span class="mat-spacer"></span>
+
+  <app-authentication-section></app-authentication-section>
+  <app-language-switcher style="color: white;"></app-language-switcher>
+</mat-toolbar>
+
+<mat-sidenav-container>
+  <mat-sidenav #sidenav style="background-color: #FF8C00;">
+    <mat-nav-list>
+      <!-- Opciones del sidenav según PatitaSolidaria -->
+      <ng-container *ngFor="let option of secondaryOptions">
+        <mat-list-item (click)="sidenav.mode === 'over' && sidenav.toggle()" [routerLink]="option.path">
+          <ng-container *ngIf="option.icon.startsWith('http'); else materialIcon">
+            <img [src]="option.icon" alt="{{ option.title }} icon" width="24px" height="24px">
+          </ng-container>
+          <ng-template #materialIcon>
+            <mat-icon matListItemIcon>{{ option.icon }}</mat-icon>
+          </ng-template>
+          {{ option.title }}
+        </mat-list-item>
+      </ng-container>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <div class="content">
+      <router-outlet></router-outlet> <!-- Aquí se mostrarán las rutas según la navegación -->
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

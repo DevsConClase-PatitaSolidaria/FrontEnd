@@ -1,0 +1,86 @@
+<div class="request-card">
+  <div class="info-box adopter-info">
+    <img [src]="request.adopterPhoto" alt="Foto adoptante" class="photo" />
+    <div>
+      <h3>{{ request.adopterName }} ({{ request.adopterAge }} {{ 'labels.age' | translate }})</h3>
+      <p><strong>{{ 'labels.reason' | translate }}:</strong> {{ request.reason }}</p>
+    </div>
+  </div>
+
+  <div class="info-box pet-info">
+    <img [src]="request.petPhoto" alt="Foto mascota" class="photo" />
+    <div>
+      <p><strong>{{ 'labels.pet' | translate }}:</strong> {{ request.petName }}</p>
+      <p><strong>{{ 'labels.age' | translate }}:</strong> {{ request.petAge }} años</p>
+    </div>
+  </div>
+
+  <p *ngIf="request.status">
+    <strong>{{ 'labels.status' | translate }}:</strong>
+    {{ ('status.' + request.status) | translate }}
+  </p>
+
+  <div class="action-buttons">
+    <button
+      class="accept-btn"
+      [disabled]="request.status !== 'pendiente'"
+      [class.disabled-btn]="request.status !== 'pendiente'"
+      (click)="openConfirmation('aceptar')">
+      {{ 'actions.accept' | translate }}
+    </button>
+    <button
+      class="reject-btn"
+      [disabled]="request.status !== 'pendiente'"
+      [class.disabled-btn]="request.status !== 'pendiente'"
+      (click)="openConfirmation('rechazar')">
+      {{ 'actions.reject' | translate }}
+    </button>
+    <button class="details-btn" (click)="openDetails()">{{ 'actions.details' | translate }}</button>
+  </div>
+</div>
+
+<!-- Modal de Confirmación -->
+<div class="modal-overlay" *ngIf="showConfirmation">
+  <div class="modal confirm-modal" [ngClass]="modalAnimation">
+    <h3>
+      {{ confirmAction === 'aceptar' ? ('confirm.acceptTitle' | translate) : ('confirm.rejectTitle' | translate) }}
+    </h3>
+    <p>
+      {{ confirmAction === 'aceptar' ? ('confirm.acceptMsg' | translate) : ('confirm.rejectMsg' | translate) }}
+    </p>
+    <div class="button-group">
+      <button class="accept-btn" *ngIf="confirmAction === 'aceptar'" (click)="confirmStatusChange()">
+        {{ 'actions.accept' | translate }}
+      </button>
+      <button class="reject-btn" *ngIf="confirmAction === 'rechazar'" (click)="confirmStatusChange()">
+        {{ 'actions.reject' | translate }}
+      </button>
+      <button class="cancel-btn" (click)="closeConfirmation()">
+        {{ 'actions.cancel' | translate }}
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Modal de Detalles -->
+<div class="modal-overlay" *ngIf="showModal">
+  <div class="modal" [ngClass]="modalAnimation">
+    <h2>{{ 'actions.details' | translate }}</h2>
+    <div class="modal-content-box">
+      <img [src]="request.adopterPhoto" class="photo" />
+      <p><strong>{{ 'labels.name' | translate }}:</strong> {{ request.adopterName }}</p>
+      <p><strong>{{ 'labels.age' | translate }}:</strong> {{ request.adopterAge }}</p>
+      <p><strong>{{ 'labels.birthDate' | translate }}:</strong> {{ request.birthDate }}</p>
+      <p><strong>{{ 'labels.email' | translate }}:</strong> {{ request.email }}</p>
+      <p><strong>{{ 'labels.dni' | translate }}:</strong> {{ request.dni }}</p>
+      <p><strong>{{ 'labels.location' | translate }}:</strong> {{ request.location }}</p>
+      <p><strong>{{ 'labels.maritalStatus' | translate }}:</strong> {{ request.maritalStatus }}</p>
+      <p><strong>{{ 'labels.hasChildren' | translate }}:</strong> {{ request.hasChildren ? 'Sí' : 'No' }}</p>
+      <p><strong>{{ 'labels.livesWithParents' | translate }}:</strong> {{ request.livesWithParents ? 'Sí' : 'No' }}</p>
+      <p><strong>{{ 'labels.economicStatus' | translate }}:</strong> {{ request.economicStatus }}</p>
+      <p><strong>{{ 'labels.phone' | translate }}:</strong> {{ request.phone }}</p>
+      <p><strong>{{ 'labels.petExperience' | translate }}:</strong> {{ request.petExperience }}</p>
+    </div>
+    <button class="reject-btn" (click)="closeDetails()">{{ 'actions.close' | translate }}</button>
+  </div>
+</div>
