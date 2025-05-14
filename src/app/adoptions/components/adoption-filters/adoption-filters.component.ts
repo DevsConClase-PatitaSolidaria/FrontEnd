@@ -7,6 +7,7 @@
 
 import { Component, EventEmitter, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { TranslateModule } from '@ngx-translate/core';
 import { AdoptionFilter } from '../../model/adoption-filter-model';
 
 @Component({
@@ -14,8 +15,9 @@ import { AdoptionFilter } from '../../model/adoption-filter-model';
   selector: 'app-adoption-filters',
   templateUrl: './adoption-filters.component.html',
   styleUrls: ['./adoption-filters.component.css'],
-  imports: [CommonModule]
+  imports: [CommonModule, TranslateModule]
 })
+  
 export class AdoptionFiltersComponent {
   /**
    * Emisor de evento para enviar los filtros actualizados al componente padre.
