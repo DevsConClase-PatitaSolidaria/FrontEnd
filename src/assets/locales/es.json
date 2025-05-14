@@ -1,0 +1,78 @@
+{
+  "LANG": {
+    "EN": "Inglés",
+    "ES": "Español"
+  },
+
+  "ADOPTION_CARD": {
+    "SPECIES": "Especie",
+    "BREED": "Raza",
+    "AGE": "Edad",
+    "YEARS": "años",
+    "GENDER": "Género",
+    "LOCATION": "Ubicación",
+    "ADOPT_BUTTON": "Solicitar adopción"
+  },
+
+  "FILTERS": {
+    "TITLE": "Filtrar por",
+    "ACTIVITY": "Nivel de actividad",
+    "WEIGHT": "Peso",
+    "SIZE": "Tamaño",
+    "HAIR_LENGTH": "Largo de pelo",
+    "GENDER": "Sexo",
+    "AGE": "Edad",
+    "LOW": "Bajo",
+    "MEDIUM": "Mediano",
+    "HIGH": "Alto",
+    "LIGHT": "Ligero",
+    "HEAVY": "Pesado",
+    "SMALL": "Pequeño",
+    "LARGE": "Grande",
+    "SHORT": "Corto",
+    "LONG": "Largo",
+    "MALE": "Macho",
+    "FEMALE": "Hembra",
+    "PUPPY": "Cachorro",
+    "ADULT": "Adulto",
+    "SENIOR": "Mayor",
+    "ALL": "Todos",
+    "CLEAR": "Limpiar filtros"
+  },
+
+  "DETAILS": {
+    "LOADING": "Cargando información de la mascota...",
+    "BACK": "Volver a adopciones",
+    "SPECIES": "Especie",
+    "BREED": "Raza",
+    "AGE": "Edad",
+    "YEARS": "años",
+    "GENDER": "Género",
+    "SIZE": "Tamaño",
+    "WEIGHT": "Peso",
+    "HAIR": "Largo de pelo",
+    "ACTIVITY": "Nivel de actividad",
+    "LOCATION": "Ubicación",
+    "DESCRIPTION": "Descripción",
+    "RESCUE_STORY": "Historia de rescate",
+    "RESCUED_BY": "Rescatado por",
+    "HEALTH": "Estado de salud",
+    "VACCINATION_TITLE": "Historial de Vacunación",
+    "DOSE": "Dosis",
+    "VACCINES": "Vacunas",
+    "ADOPT_BUTTON": "Solicitar adopción",
+    "NOT_FOUND": "Mascota no encontrada."
+  },
+
+  "LIST": {
+    "SEARCH_PLACEHOLDER": "Buscar por nombre...",
+    "SORT_BY": "Ordenar por:",
+    "SORT_SELECT": "-- Seleccionar --",
+    "SORT_NAME_ASC": "Nombre (A-Z)",
+    "SORT_NAME_DESC": "Nombre (Z-A)",
+    "SORT_AGE_ASC": "Edad (menor a mayor)",
+    "SORT_AGE_DESC": "Edad (mayor a menor)",
+    "NO_PETS": "No hay mascotas disponibles.",
+    "LOADING": "Cargando mascotas..."
+  }
+}
