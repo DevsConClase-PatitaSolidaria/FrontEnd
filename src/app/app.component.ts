@@ -42,7 +42,7 @@ export class AppComponent implements OnInit {
   @ViewChild(MatSidenav, { static: true }) sidenav!: MatSidenav;
 
   mainOptions = [
-    { path: '/authentication', title: 'Autenticación' },
+    { path: '/authentication', title: 'Autenticación' }
   ];
 
   secondaryOptions = [
@@ -51,7 +51,7 @@ export class AppComponent implements OnInit {
     { icon: 'https://cdn-icons-png.flaticon.com/512/11008/11008379.png', path: '/donations', title: 'Donaciones' },
     { icon: 'https://cdn-icons-png.flaticon.com/512/3177/3177440.png', path: '/profile', title: 'Perfil' },
     { icon: 'https://cdn-icons-png.flaticon.com/512/2680/2680900.png', path: '/publications', title: 'Publicaciones' },
-    { icon: 'https://cdn-icons-png.flaticon.com/512/3842/3842536.png', path: '/manage-adoptions', title: 'Gestión de Adopciones' },
+    { icon: 'https://cdn-icons-png.flaticon.com/512/3842/3842536.png', path: '/manage-adoptions', title: 'Gestión de Adopciones' }
   ];
 
   constructor(
@@ -60,23 +60,21 @@ export class AppComponent implements OnInit {
     private authenticationService: AuthenticationService,
     private router: Router
   ) {
-    translate.setDefaultLang('en');
-    translate.use('en');
+    // Inicializa el idioma predeterminado
+    this.translate.setDefaultLang('en');
+    this.translate.use('en');
   }
 
   ngOnInit(): void {
-    // Verifica el usuario autenticado
-    this.authenticationService.isSignedIn.subscribe(
-      (isSignedIn) => {
-        this.isSignedIn = isSignedIn;
-        // Si el usuario no está autenticado, redirigimos a la página de inicio de sesión
-        if (!isSignedIn) {
-          this.router.navigate(['/sign-in']);
-        }
+    // Verifica el estado de autenticación
+    this.authenticationService.isSignedIn.subscribe((isSignedIn) => {
+      this.isSignedIn = isSignedIn;
+      if (!isSignedIn) {
+        this.router.navigate(['/sign-in']);
       }
-    );
+    });
 
-    // Configuración de la vista de Sidenav dependiendo del tamaño de la pantalla
+    // Cambia el modo de navegación lateral según el tamaño de pantalla
     this.observer.observe(['(max-width: 1280px)']).subscribe((response) => {
       if (response.matches) {
         this.sidenav.mode = 'over';

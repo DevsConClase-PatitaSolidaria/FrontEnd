@@ -1,0 +1,59 @@
+<div class="donation-card">
+  <img *ngIf="donation.imageUrl" [src]="donation.imageUrl" alt="Imagen de la campaña" />
+
+  <h3>{{ donation.title }}</h3>
+
+  <p>{{ donation.description.replace('Plin o CCI', 'Plin') }}</p>
+
+  <!-- Contacto según tipo -->
+  <p *ngIf="donation.title.includes('Yape') || donation.title.includes('Plin')">
+    <strong>Número para donaciones:</strong>
+    {{ donation.contactInfo.split('-')[0].replace('Yape:', '').trim() }}
+  </p>
+
+  <p *ngIf="!(donation.title.includes('Yape') || donation.title.includes('Plin'))">
+    <strong>Contacto:</strong> {{ donation.contactInfo }}
+  </p>
+
+  <p *ngIf="donation.location">
+    <strong>Ubicación:</strong> {{ donation.location }}
+  </p>
+
+  <!-- Botón solo si es monetaria y no es refugio -->
+  <button
+    *ngIf="donation.type === 'monetaria' && userRole !== 'refugio'"
+    (click)="showForm = !showForm">
+    {{ showForm ? 'Cancelar' : 'Donar' }}
+  </button>
+
+  <!-- Formulario -->
+  <div *ngIf="showForm && donation.type === 'monetaria'" class="donation-form">
+    <label>
+      Monto a donar:
+      <input type="number" placeholder="S/." />
+    </label>
+
+    <label>
+      Método de pago:
+      <select>
+        <option value="yape">Yape</option>
+        <option value="plin">Plin</option>
+        <option value="transferencia">Transferencia</option>
+      </select>
+    </label>
+
+    <label>
+      Número de operación realizada:
+      <input type="text" placeholder="Ej. 23453564" />
+    </label>
+
+    <label>
+      Nombre:
+      <input type="text" placeholder="Tu nombre" />
+    </label>
+
+    <button>Confirmar donación</button>
+  </div>
+</div>
+
+

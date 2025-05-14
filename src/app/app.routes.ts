@@ -26,7 +26,11 @@ export const routes: Routes = [
   { path: 'donations', component: DonationOptionsComponent },
   { path: 'profile', component: ProfilePageComponent},
   { path: 'publications', component: PublicationsDashboardComponent},
-  { path: 'manage-adoptions', component: AdoptionManagementComponent},
+  {
+    path: 'manage-adoptions',
+    loadComponent: () => import('./manage-adoptions/pages/adoption-management/adoption-management.component')
+      .then(m => m.AdoptionManagementComponent)
+  },
 
   { path: 'sign-in', component: SignInComponent },
   { path: 'sign-up', component: SignUpComponent },

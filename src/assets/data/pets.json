@@ -1,0 +1,412 @@
+[
+  {
+    "id": 1,
+    "name": "Firulais",
+    "age": 0.7,
+    "species": "Perro",
+    "breed": "Labrador",
+    "gender": "Macho",
+    "location": "Chimbote",
+    "size": "Grande",
+    "hair": "Corto",
+    "activity": "Alto",
+    "weight": "Pesado",
+    "imageUrl": "https://placedog.net/400/300?id=101",
+    "description": "Firulais es un cachorro juguetón y curioso. Ideal para familias con niños.",
+    "rescue_story": "Rescatado cerca del mercado central tras ser abandonado.",
+    "rescued_by": "Asociación Patitas Felices",
+    "health": "Salud estable y en crecimiento.",
+    "vaccinated": true,
+    "vaccination_record": [
+      {
+        "date": "2024-08-17",
+        "doses": 1,
+        "vaccines": [
+          "Moquillo",
+          "Parvovirus",
+          "Parainfluenza",
+          "Bordetella"
+        ]
+      },
+      {
+        "date": "2023-07-05",
+        "doses": 2,
+        "vaccines": [
+          "Parainfluenza",
+          "Parvovirus",
+          "Moquillo",
+          "Leptospirosis"
+        ]
+      },
+      {
+        "date": "2025-02-22",
+        "doses": 3,
+        "vaccines": [
+          "Moquillo",
+          "Rabia",
+          "Parvovirus",
+          "Bordetella"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Mishi",
+    "age": 1.5,
+    "species": "Gato",
+    "breed": "Siames",
+    "gender": "Hembra",
+    "location": "Nuevo Chimbote",
+    "size": "Pequeño",
+    "hair": "Mediano",
+    "activity": "Medio",
+    "weight": "Ligero",
+    "imageUrl": "https://loremflickr.com/400/300/cat?lock=102",
+    "description": "Mishi es dulce, le gusta dormir en lugares altos y tranquilos.",
+    "rescue_story": "Encontrada en un parque sola y débil.",
+    "rescued_by": "Refugio Gatuno Nuevo Amanecer",
+    "health": "Totalmente recuperada.",
+    "vaccinated": true,
+    "vaccination_record": [
+      {
+        "date": "2024-07-05",
+        "doses": 1,
+        "vaccines": [
+          "Rabia",
+          "Panleucopenia",
+          "Calicivirus",
+          "Clamidiosis"
+        ]
+      },
+      {
+        "date": "2024-06-06",
+        "doses": 2,
+        "vaccines": [
+          "Rabia",
+          "Panleucopenia",
+          "Calicivirus",
+          "Clamidiosis"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Toribio",
+    "age": 8,
+    "species": "Perro",
+    "breed": "Pastor Alemán",
+    "gender": "Macho",
+    "location": "Chimbote",
+    "size": "Grande",
+    "hair": "Largo",
+    "activity": "Medio",
+    "weight": "Pesado",
+    "imageUrl": "https://placedog.net/400/300?id=103",
+    "description": "Toribio es protector y leal, ideal para casas con patio.",
+    "rescue_story": "Rescatado de un descampado tras denuncia vecinal.",
+    "rescued_by": "Municipalidad de Chimbote",
+    "health": "Tiene artritis leve, pero camina bien.",
+    "vaccinated": false,
+    "vaccination_record": [
+      {
+        "date": "2024-03-06",
+        "doses": 1,
+        "vaccines": [
+          "Moquillo",
+          "Hepatitis",
+          "Parvovirus",
+          "Bordetella"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Luna",
+    "age": 3,
+    "species": "Gato",
+    "breed": "Maine Coon",
+    "gender": "Hembra",
+    "location": "Nuevo Chimbote",
+    "size": "Mediano",
+    "hair": "Largo",
+    "activity": "Bajo",
+    "weight": "Mediano",
+    "imageUrl": "https://loremflickr.com/400/300/cat?lock=104",
+    "description": "Luna es mayor y muy tranquila, le encanta dormir.",
+    "rescue_story": "Vivía sola en una azotea.",
+    "rescued_by": "Voluntarios Independientes",
+    "health": "Requiere chequeo mensual.",
+    "vaccinated": true,
+    "vaccination_record": [
+      {
+        "date": "2024-12-23",
+        "doses": 1,
+        "vaccines": [
+          "Panleucopenia",
+          "Rabia",
+          "Herpesvirus",
+          "Clamidiosis"
+        ]
+      },
+      {
+        "date": "2024-06-10",
+        "doses": 2,
+        "vaccines": [
+          "Panleucopenia",
+          "Rabia",
+          "Calicivirus",
+          "Clamidiosis"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Rocky",
+    "age": 0.3,
+    "species": "Perro",
+    "breed": "Bulldog",
+    "gender": "Macho",
+    "location": "Chimbote",
+    "size": "Mediano",
+    "hair": "Corto",
+    "activity": "Alto",
+    "weight": "Mediano",
+    "imageUrl": "https://placedog.net/400/300?id=105",
+    "description": "Rocky es enérgico y necesita espacio para correr.",
+    "rescue_story": "Hallado en una caja de cartón en una avenida.",
+    "rescued_by": "Asociación Patitas Felices",
+    "health": "Totalmente sano y activo.",
+    "vaccinated": false,
+    "vaccination_record": [
+      {
+        "date": "2024-08-06",
+        "doses": 1,
+        "vaccines": [
+          "Hepatitis",
+          "Moquillo",
+          "Parainfluenza",
+          "Bordetella"
+        ]
+      },
+      {
+        "date": "2025-02-28",
+        "doses": 2,
+        "vaccines": [
+          "Rabia",
+          "Moquillo",
+          "Parainfluenza",
+          "Leptospirosis"
+        ]
+      },
+      {
+        "date": "2024-07-15",
+        "doses": 3,
+        "vaccines": [
+          "Rabia",
+          "Moquillo",
+          "Hepatitis",
+          "Bordetella"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Canela",
+    "age": 6.5,
+    "species": "Gato",
+    "breed": "Persa",
+    "gender": "Hembra",
+    "location": "Nuevo Chimbote",
+    "size": "Mediano",
+    "hair": "Largo",
+    "activity": "Bajo",
+    "weight": "Ligero",
+    "imageUrl": "https://loremflickr.com/400/300/cat?lock=106",
+    "description": "Canela es reservada, pero afectuosa una vez que confía.",
+    "rescue_story": "Cedida por una familia que ya no podía tenerla.",
+    "rescued_by": "Refugio Gatuno Nuevo Amanecer",
+    "health": "Salud estable.",
+    "vaccinated": true,
+    "vaccination_record": [
+      {
+        "date": "2023-08-22",
+        "doses": 1,
+        "vaccines": [
+          "Herpesvirus",
+          "Rabia",
+          "Calicivirus",
+          "Clamidiosis"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Max",
+    "age": 7.2,
+    "species": "Perro",
+    "breed": "Golden Retriever",
+    "gender": "Macho",
+    "location": "Chimbote",
+    "size": "Grande",
+    "hair": "Largo",
+    "activity": "Alto",
+    "weight": "Pesado",
+    "imageUrl": "https://placedog.net/400/300?id=107",
+    "description": "Max es un perro mayor muy noble y obediente.",
+    "rescue_story": "Rescatado en la playa tras ser abandonado.",
+    "rescued_by": "Protección Animal Chimbote",
+    "health": "Requiere tratamiento para displasia.",
+    "vaccinated": false,
+    "vaccination_record": [
+      {
+        "date": "2024-10-15",
+        "doses": 1,
+        "vaccines": [
+          "Parvovirus",
+          "Parainfluenza",
+          "Hepatitis",
+          "Bordetella"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Nala",
+    "age": 2,
+    "species": "Gato",
+    "breed": "Bengala",
+    "gender": "Hembra",
+    "location": "Nuevo Chimbote",
+    "size": "Pequeño",
+    "hair": "Corto",
+    "activity": "Medio",
+    "weight": "Ligero",
+    "imageUrl": "https://loremflickr.com/400/300/cat?lock=108",
+    "description": "Nala es juguetona y se lleva bien con otros gatos.",
+    "rescue_story": "Encontrada con sus hermanos en un callejón.",
+    "rescued_by": "Refugio Gatuno Nuevo Amanecer",
+    "health": "Muy saludable.",
+    "vaccinated": true,
+    "vaccination_record": [
+      {
+        "date": "2023-09-07",
+        "doses": 1,
+        "vaccines": [
+          "Rabia",
+          "Panleucopenia",
+          "Calicivirus",
+          "Clamidiosis"
+        ]
+      },
+      {
+        "date": "2023-06-20",
+        "doses": 2,
+        "vaccines": [
+          "Panleucopenia",
+          "Calicivirus",
+          "Rabia",
+          "Clamidiosis"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Zeus",
+    "age": 4,
+    "species": "Perro",
+    "breed": "Boxer",
+    "gender": "Macho",
+    "location": "Chimbote",
+    "size": "Grande",
+    "hair": "Corto",
+    "activity": "Alto",
+    "weight": "Pesado",
+    "imageUrl": "https://placedog.net/400/300?id=109",
+    "description": "Zeus es fuerte y necesita entrenamiento y cariño.",
+    "rescue_story": "Rescatado tras denuncia por maltrato.",
+    "rescued_by": "Policía Ambiental",
+    "health": "Buena condición física.",
+    "vaccinated": true,
+    "vaccination_record": [
+      {
+        "date": "2024-01-27",
+        "doses": 1,
+        "vaccines": [
+          "Parainfluenza",
+          "Moquillo",
+          "Parvovirus",
+          "Bordetella"
+        ]
+      },
+      {
+        "date": "2025-02-26",
+        "doses": 2,
+        "vaccines": [
+          "Parainfluenza",
+          "Parvovirus",
+          "Hepatitis",
+          "Bordetella"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Kiara",
+    "age": 0.9,
+    "species": "Gato",
+    "breed": "Ragdoll",
+    "gender": "Hembra",
+    "location": "Nuevo Chimbote",
+    "size": "Pequeño",
+    "hair": "Mediano",
+    "activity": "Bajo",
+    "weight": "Ligero",
+    "imageUrl": "https://loremflickr.com/400/300/cat?lock=110",
+    "description": "Kiara es tierna, le gusta estar acompañada y ronronear.",
+    "rescue_story": "Hallada cerca de un contenedor de basura.",
+    "rescued_by": "Asociación Patitas Felices",
+    "health": "En excelente estado.",
+    "vaccinated": true,
+    "vaccination_record": [
+      {
+        "date": "2025-01-22",
+        "doses": 1,
+        "vaccines": [
+          "Rabia",
+          "Panleucopenia",
+          "Calicivirus",
+          "Leucemia Felina"
+        ]
+      },
+      {
+        "date": "2023-08-20",
+        "doses": 2,
+        "vaccines": [
+          "Rabia",
+          "Calicivirus",
+          "Panleucopenia",
+          "Clamidiosis"
+        ]
+      },
+      {
+        "date": "2023-12-30",
+        "doses": 3,
+        "vaccines": [
+          "Rabia",
+          "Herpesvirus",
+          "Calicivirus",
+          "Clamidiosis"
+        ]
+      }
+    ]
+  }
+]

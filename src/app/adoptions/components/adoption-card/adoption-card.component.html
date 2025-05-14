@@ -1,0 +1,25 @@
+<!--
+  Autor: @leccapedro
+  Descripción: Plantilla del componente que muestra una tarjeta de mascota en adopción,
+  incluyendo su imagen, datos generales y un botón para solicitar adopción.
+-->
+
+<div class="card">
+  <!-- Imagen de la mascota -->
+  <img [src]="pet.imageUrl" alt="{{ pet.name }}" class="card-image" />
+
+  <div class="card-content">
+    <!-- Nombre de la mascota -->
+    <h3>{{ pet.name }}</h3>
+
+    <!-- Detalles clave de la mascota -->
+    <p><strong>Especie:</strong> {{ pet.species }}</p>
+    <p><strong>Raza:</strong> {{ pet.breed }}</p>
+    <p><strong>Edad:</strong> {{ pet.age }} años</p>
+    <p><strong>Género:</strong> {{ pet.gender }}</p>
+    <p><strong>Ubicación:</strong> {{ pet.location }}</p>
+
+    <!-- Botón para solicitar adopción (sin funcionalidad aún) -->
+    <a [routerLink]="['/adoptions', pet.id]" class="adopt-btn">Solicitar adopción</a>
+  </div>
+</div>
