@@ -42,5 +42,26 @@
     "acceptMsg": "¿Estás seguro de aceptar a este adoptante?",
     "rejectTitle": "Confirmar Rechazo",
     "rejectMsg": "¿Estás seguro de rechazar a este adoptante?"
+  },
+
+  "pet": {
+    "buttons": {
+      "details": "Ver detalles"
+    },
+    "photoAlt": "Foto de {{name}}",
+    "yearsOld": "años"
+  },
+  "pets": {
+    "title": "Adopta un amigo",
+    "filter": {
+      "title": "Filtrar por estado",
+      "ariaLabel": "Seleccionar estado de mascota",
+      "all": "Todos",
+      "available": "Disponibles",
+      "adopted": "Adoptados",
+      "pending": "Pendientes"
+    },
+    "loading": "Cargando mascotas...",
+    "empty": "No se encontraron mascotas."
   }
 }

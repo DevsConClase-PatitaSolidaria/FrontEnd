@@ -42,5 +42,26 @@
     "acceptMsg": "Are you sure you want to accept this adopter?",
     "rejectTitle": "Confirm Rejection",
     "rejectMsg": "Are you sure you want to reject this adopter?"
+  },
+
+  "pet": {
+    "buttons": {
+      "details": "View details"
+    },
+    "photoAlt": "Photo of {{name}}",
+    "yearsOld": "years old"
+  },
+  "pets": {
+    "title": "Adopt a Friend",
+    "filter": {
+      "title": "Filter by status",
+      "ariaLabel": "Select pet status",
+      "all": "All",
+      "available": "Available",
+      "adopted": "Adopted",
+      "pending": "Pending"
+    },
+    "loading": "Loading pets...",
+    "empty": "No pets found."
   }
 }

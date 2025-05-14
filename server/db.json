@@ -43,5 +43,46 @@
       "phone": "+51 923456789",
       "petExperience": "Actualmente tengo un gato. De niña tuve un conejo."
     }
+  ],
+
+  "pets": [
+    {
+      "id": 1,
+      "name": "Max",
+      "age": 3,
+      "photo": "https://images.unsplash.com/photo-1561037404-61cd46aa615b",
+      "breed": "Labrador Retriever",
+      "size": "large",
+      "status": "available",
+      "description": "Max es un perro juguetón y energético que adora los paseos largos y nadar en el lago.",
+      "healthStatus": "Excelente",
+      "vaccinationStatus": "Completo",
+      "specialNeeds": "Necesita ejercicio diario"
+    },
+    {
+      "id": 2,
+      "name": "Luna",
+      "age": 2,
+      "photo": "https://images.unsplash.com/photo-1526336024174-e58f5cdd8e13",
+      "breed": "Siamés",
+      "size": "small",
+      "status": "pending",
+      "description": "Luna es una gata cariñosa pero tímida al principio. Le encanta dormir en lugares cálidos.",
+      "healthStatus": "En tratamiento",
+      "vaccinationStatus": "Pendiente",
+      "specialNeeds": "Requiere dieta especial"
+    },
+    {
+      "id": 3,
+      "name": "Rocky",
+      "age": 5,
+      "photo": "https://images.unsplash.com/photo-1583337130417-3346a1be7dee",
+      "breed": "Bulldog Francés",
+      "size": "medium",
+      "status": "adopted",
+      "description": "Rocky es tranquilo y le encanta estar en compañía. Perfecto para departamentos pequeños.",
+      "healthStatus": "Excelente",
+      "vaccinationStatus": "Completo"
+    }
   ]
 }

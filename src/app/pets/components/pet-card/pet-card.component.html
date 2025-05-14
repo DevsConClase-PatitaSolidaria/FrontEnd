@@ -1,0 +1,44 @@
+<div class="pet-card" [ngClass]="{'processing': isProcessing}">
+  <div class="status-indicator" [class]="getStatusBadgeClass()">
+    {{ pet.status | translate }}
+  </div>
+
+  <img [src]="pet.photo" [alt]="'pet.photoAlt' | translate: {name: pet.name}" class="pet-image">
+
+  <div class="pet-info">
+    <h3>{{ pet.name }}</h3>
+    <p>{{ pet.breed }} • {{ pet.age }} {{ 'pet.yearsOld' | translate }}</p>
+  </div>
+
+  <button (click)="openDetails()" [disabled]="isProcessing">
+    {{ 'pet.buttons.details' | translate }}
+  </button>
+
+  <!-- Modal de detalles -->
+  <div *ngIf="showModal" class="modal" [ngClass]="{'show': showModal}">
+    <div class="modal-content">
+      <h2>{{ pet.name }}</h2>
+      <img [src]="pet.photo" [alt]="pet.name" class="pet-modal-image">
+      <p><strong>Raza:</strong> {{ pet.breed }}</p>
+      <p><strong>Edad:</strong> {{ pet.age }} años</p>
+      <p><strong>Descripción:</strong> {{ pet.description || 'No hay descripción adicional' }}</p>
+
+      <div class="modal-buttons">
+        <!-- Botón "Ir a adoptar" -->
+        <button [routerLink]="'/adoptions'" class="adopt-link">
+          Ir a adoptar
+        </button>
+        <!-- Botón "Cerrar" -->
+        <button (click)="closeDetails()" class="btn-close">
+          Cerrar
+        </button>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Modal de confirmación -->
+  <div *ngIf="showConfirmation" class="confirmation-modal" [class]="modalAnimation">
+    <!-- Contenido de confirmación -->
+  </div>
+</div>
