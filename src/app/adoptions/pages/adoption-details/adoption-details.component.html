@@ -5,10 +5,10 @@
 -->
 
 <!-- Loader mientras se obtienen los datos -->
-<div *ngIf="loading">Cargando información de la mascota...</div>
+<div *ngIf="loading">{{ 'DETAILS.LOADING' | translate }}</div>
 
 <!-- Botón para volver -->
-<a routerLink="/adoptions" class="back-button">← Volver a adopciones</a>
+<a routerLink="/adoptions" class="back-button">← {{ 'DETAILS.BACK' | translate }}</a>
 
 <!-- Contenedor principal -->
 <div *ngIf="!loading && pet" class="pet-details-container">
@@ -23,44 +23,44 @@
     <h2>{{ pet.name }}</h2>
 
     <!-- Detalles básicos -->
-    <p><strong>Especie:</strong> {{ pet.species }}</p>
-    <p><strong>Raza:</strong> {{ pet.breed }}</p>
-    <p><strong>Edad:</strong> {{ pet.age }} años</p>
-    <p><strong>Género:</strong> {{ pet.gender }}</p>
-    <p><strong>Tamaño:</strong> {{ pet.size }}</p>
-    <p><strong>Peso:</strong> {{ pet.weight }}</p>
-    <p><strong>Largo de pelo:</strong> {{ pet.hair }}</p>
-    <p><strong>Nivel de actividad:</strong> {{ pet.activity }}</p>
-    <p><strong>Ubicación:</strong> {{ pet.location }}</p>
+    <p><strong>{{ 'DETAILS.SPECIES' | translate }}:</strong> {{ pet.species }}</p>
+    <p><strong>{{ 'DETAILS.BREED' | translate }}:</strong> {{ pet.breed }}</p>
+    <p><strong>{{ 'DETAILS.AGE' | translate }}:</strong> {{ pet.age }} {{ 'DETAILS.YEARS' | translate }}</p>
+    <p><strong>{{ 'DETAILS.GENDER' | translate }}:</strong> {{ pet.gender }}</p>
+    <p><strong>{{ 'DETAILS.SIZE' | translate }}:</strong> {{ pet.size }}</p>
+    <p><strong>{{ 'DETAILS.WEIGHT' | translate }}:</strong> {{ pet.weight }}</p>
+    <p><strong>{{ 'DETAILS.HAIR' | translate }}:</strong> {{ pet.hair }}</p>
+    <p><strong>{{ 'DETAILS.ACTIVITY' | translate }}:</strong> {{ pet.activity }}</p>
+    <p><strong>{{ 'DETAILS.LOCATION' | translate }}:</strong> {{ pet.location }}</p>
 
     <hr />
 
     <!-- Descripción y historia -->
-    <p><strong>Descripción:</strong> {{ pet.description }}</p>
-    <p><strong>Historia de rescate:</strong> {{ pet.rescue_story }}</p>
-    <p><strong>Rescatado por:</strong> {{ pet.rescued_by }}</p>
-    <p><strong>Estado de salud:</strong> {{ pet.health }}</p>
+    <p><strong>{{ 'DETAILS.DESCRIPTION' | translate }}:</strong> {{ pet.description }}</p>
+    <p><strong>{{ 'DETAILS.RESCUE_STORY' | translate }}:</strong> {{ pet.rescue_story }}</p>
+    <p><strong>{{ 'DETAILS.RESCUED_BY' | translate }}:</strong> {{ pet.rescued_by }}</p>
+    <p><strong>{{ 'DETAILS.HEALTH' | translate }}:</strong> {{ pet.health }}</p>
 
     <hr />
 
-    <!-- 💉 Registro de vacunación -->
+    <!-- Registro de vacunación -->
     <div *ngIf="pet.vaccination_record && pet.vaccination_record.length">
-      <h3>Historial de Vacunación</h3>
+      <h3>{{ 'DETAILS.VACCINATION_TITLE' | translate }}</h3>
       <ul>
         <li *ngFor="let registro of pet.vaccination_record">
-          <strong>Dosis {{ registro.doses }}:</strong>
+          <strong>{{ 'DETAILS.DOSE' | translate }} {{ registro.doses }}:</strong>
           <span>{{ registro.date }}</span><br />
-          <em>Vacunas:</em> {{ registro.vaccines.join(', ') }}
+          <em>{{ 'DETAILS.VACCINES' | translate }}:</em> {{ registro.vaccines.join(', ') }}
         </li>
       </ul>
     </div>
 
     <!-- Botón de solicitud -->
-    <button class="adopt-button">Solicitar adopción</button>
+    <button class="adopt-button">{{ 'DETAILS.ADOPT_BUTTON' | translate }}</button>
   </div>
 </div>
 
 <!-- En caso no se encuentre la mascota -->
 <div *ngIf="!loading && !pet">
-  <p>Mascota no encontrada.</p>
+  <p>{{ 'DETAILS.NOT_FOUND' | translate }}</p>
 </div>
