@@ -1,20 +1,21 @@
+
 <section class="pets-gallery">
   <!-- Título con internacionalización -->
-  <h1 class="gallery-title">{{ 'pets.title' | translate }}</h1>
+  <h1 class="gallery-title">{{ 'ADOPTION_MANAGEMENT.pets.title' | translate }}</h1>
 
   <!-- Filtros mejorados -->
   <div class="filter-container" aria-labelledby="filter-label">
-    <label id="filter-label" for="status-filter">{{ 'pets.filter.title' | translate }}</label>
+    <label id="filter-label" for="status-filter">{{ 'ADOPTION_MANAGEMENT.pets.filter.title' | translate }}</label>
     <div class="select-wrapper">
       <select
         id="status-filter"
         class="status-filter"
         [(ngModel)]="statusFilter"
-        [attr.aria-label]="'pets.filter.ariaLabel' | translate">
-        <option value="all">{{ 'pets.filter.all' | translate }}</option>
-        <option value="available">{{ 'pets.filter.available' | translate }}</option>
-        <option value="adopted">{{ 'pets.filter.adopted' | translate }}</option>
-        <option value="pending">{{ 'pets.filter.pending' | translate }}</option>
+        [attr.aria-label]="'ADOPTION_MANAGEMENT.pets.filter.ariaLabel' | translate">
+        <option value="all">{{ 'ADOPTION_MANAGEMENT.pets.filter.all' | translate }}</option>
+        <option value="available">{{ 'ADOPTION_MANAGEMENT.pets.filter.available' | translate }}</option>
+        <option value="adopted">{{ 'ADOPTION_MANAGEMENT.pets.filter.adopted' | translate }}</option>
+        <option value="pending">{{ 'ADOPTION_MANAGEMENT.pets.filter.pending' | translate }}</option>
       </select>
     </div>
   </div>
@@ -22,7 +23,7 @@
   <!-- Estado de carga -->
   <div *ngIf="isLoading" class="loading-state" aria-live="polite">
     <span class="spinner"></span>
-    {{ 'pets.loading' | translate }}
+    {{ 'ADOPTION_MANAGEMENT.pets.loading' | translate }}
   </div>
 
   <!-- Grid de mascotas -->
@@ -37,6 +38,6 @@
 
   <!-- Mensaje si no hay mascotas -->
   <div *ngIf="!isLoading && filteredPets.length === 0" class="empty-state">
-    {{ 'pets.empty' | translate }}
+    {{ 'ADOPTION_MANAGEMENT.pets.empty' | translate }}
   </div>
 </section>
