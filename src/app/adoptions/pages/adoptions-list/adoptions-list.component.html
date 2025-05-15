@@ -16,26 +16,26 @@
     <!-- Campo de búsqueda por nombre -->
     <input
       type="text"
-      placeholder="Buscar por nombre..."
+      [placeholder]="'LIST.SEARCH_PLACEHOLDER' | translate"
       [(ngModel)]="search"
       class="search-input"
     />
 
     <!-- Selector para ordenar el listado -->
     <div class="sort-bar">
-      <label for="sortSelect">Ordenar por:</label>
+      <label for="sortSelect">{{ 'LIST.SORT_BY' | translate }}</label>
       <select id="sortSelect" [(ngModel)]="sortOption" (change)="applySort()">
-        <option value="">-- Seleccionar --</option>
-        <option value="name-asc">Nombre (A-Z)</option>
-        <option value="name-desc">Nombre (Z-A)</option>
-        <option value="age-asc">Edad (menor a mayor)</option>
-        <option value="age-desc">Edad (mayor a menor)</option>
+        <option value="">{{ 'LIST.SORT_SELECT' | translate }}</option>
+        <option value="name-asc">{{ 'LIST.SORT_NAME_ASC' | translate }}</option>
+        <option value="name-desc">{{ 'LIST.SORT_NAME_DESC' | translate }}</option>
+        <option value="age-asc">{{ 'LIST.SORT_AGE_ASC' | translate }}</option>
+        <option value="age-desc">{{ 'LIST.SORT_AGE_DESC' | translate }}</option>
       </select>
     </div>
 
     <!-- Mensaje si no hay mascotas disponibles -->
     <div *ngIf="!loading && pets.length === 0">
-      No hay mascotas disponibles.
+      {{ 'LIST.NO_PETS' | translate }}
     </div>
 
     <!-- Tarjetas de mascotas filtradas -->
@@ -47,6 +47,6 @@
     </div>
 
     <!-- Indicador de carga -->
-    <div *ngIf="loading">Cargando mascotas...</div>
+    <div *ngIf="loading">{{ 'LIST.LOADING' | translate }}</div>
   </main>
 </div>
