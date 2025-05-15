@@ -1,5 +1,5 @@
 <div class="donation-card">
-  <img *ngIf="donation.imageUrl" [src]="donation.imageUrl" alt="Imagen de la campaña" />
+  <img *ngIf="donation.imageUrl" [src]="donation.imageUrl" alt="Campaign image" />
 
   <h3>{{ donation.title }}</h3>
 
@@ -7,53 +7,53 @@
 
   <!-- Contacto según tipo -->
   <p *ngIf="donation.title.includes('Yape') || donation.title.includes('Plin')">
-    <strong>Número para donaciones:</strong>
+    <strong>{{ 'DONATION_CARD.donationNumber' | translate }}</strong>
     {{ donation.contactInfo.split('-')[0].replace('Yape:', '').trim() }}
   </p>
 
   <p *ngIf="!(donation.title.includes('Yape') || donation.title.includes('Plin'))">
-    <strong>Contacto:</strong> {{ donation.contactInfo }}
+    <strong>{{ 'DONATION_CARD.contact' | translate }}</strong>
+    {{ donation.contactInfo }}
   </p>
 
   <p *ngIf="donation.location">
-    <strong>Ubicación:</strong> {{ donation.location }}
+    <strong>{{ 'DONATION_CARD.location' | translate }}</strong>
+    {{ donation.location }}
   </p>
 
   <!-- Botón solo si es monetaria y no es refugio -->
   <button
     *ngIf="donation.type === 'monetaria' && userRole !== 'refugio'"
     (click)="showForm = !showForm">
-    {{ showForm ? 'Cancelar' : 'Donar' }}
+    {{ showForm ? ('DONATION_CARD.cancel' | translate) : ('DONATION_CARD.donate' | translate) }}
   </button>
 
   <!-- Formulario -->
   <div *ngIf="showForm && donation.type === 'monetaria'" class="donation-form">
     <label>
-      Monto a donar:
-      <input type="number" placeholder="S/." />
+      {{ 'DONATION_CARD.form.amount' | translate }}
+      <input type="number" [placeholder]="'DONATION_CARD.form.placeholderAmount' | translate" />
     </label>
 
     <label>
-      Método de pago:
+      {{ 'DONATION_CARD.form.method' | translate }}
       <select>
-        <option value="yape">Yape</option>
-        <option value="plin">Plin</option>
-        <option value="transferencia">Transferencia</option>
+        <option value="yape">{{ 'DONATION_CARD.form.methods.yape' | translate }}</option>
+        <option value="plin">{{ 'DONATION_CARD.form.methods.plin' | translate }}</option>
+        <option value="transferencia">{{ 'DONATION_CARD.form.methods.transfer' | translate }}</option>
       </select>
     </label>
 
     <label>
-      Número de operación realizada:
-      <input type="text" placeholder="Ej. 23453564" />
+      {{ 'DONATION_CARD.form.operationNumber' | translate }}
+      <input type="text" [placeholder]="'DONATION_CARD.form.operationPlaceholder' | translate" />
     </label>
 
     <label>
-      Nombre:
-      <input type="text" placeholder="Tu nombre" />
+      {{ 'DONATION_CARD.form.name' | translate }}
+      <input type="text" [placeholder]="'DONATION_CARD.form.namePlaceholder' | translate" />
     </label>
 
-    <button>Confirmar donación</button>
+    <button>{{ 'DONATION_CARD.form.confirm' | translate }}</button>
   </div>
 </div>
-
-
