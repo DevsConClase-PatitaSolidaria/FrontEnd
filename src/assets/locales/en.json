@@ -183,5 +183,23 @@
     "back": "← Back",
     "supportMoney": "Support monetarily",
     "supportGoods": "Support with physical donations"
+  },
+
+  "USER_PROFILE": {
+    "title": "User Profiles",
+    "location": "Location",
+    "email": "Email",
+    "lookingFor": "Looking for / Offers:",
+    "capacity": "Capacity",
+    "available": "Available animals",
+    "homeType": "Type of housing",
+    "previousExperience": "Previous experience",
+    "none": "None",
+    "notifications": "Notifications",
+    "paymentMethods": "Accepts"
+  },
+
+  "HEADER": {
+    "home": "Home"
   }
 }
