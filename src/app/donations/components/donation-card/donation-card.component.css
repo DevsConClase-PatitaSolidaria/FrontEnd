@@ -1,0 +1,60 @@
+.donation-card {
+  background-color: white;
+  padding: 20px;
+  margin: 16px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.donation-card img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.donation-form {
+  margin-top: 16px;
+  text-align: left;
+}
+
+.donation-form label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.donation-form input,
+.donation-form select {
+  width: 100%;
+  padding: 6px;
+  margin-top: 4px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.donation-form button {
+  background-color: orange;
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.donation-card button {
+  background-color: #ffa500; /* naranja */
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.donation-card button:hover {
+  background-color: #e69500;
+}

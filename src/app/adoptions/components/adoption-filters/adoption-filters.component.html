@@ -1,0 +1,98 @@
+<!--
+  Autor: @leccapedro
+  Descripción: Plantilla del componente de filtros para mascotas en adopción.
+  Cada sección representa un grupo colapsable de filtros aplicables como edad, tamaño, género, etc.
+-->
+
+<div class="filter-wrapper">
+  <h3>Filtrar por</h3>
+
+  <!-- Filtro por nivel de actividad -->
+  <div class="filter-section">
+    <button type="button" (click)="toggle('activity')">Nivel de actividad +</button>
+    <div *ngIf="expanded.activity" class="filter-group">
+      <label><input type="radio" name="activity" value="Bajo" (change)="updateFilter('activity', 'Bajo')"> Bajo</label><br>
+      <label><input type="radio" name="activity" value="Medio" (change)="updateFilter('activity', 'Medio')"> Medio</label><br>
+      <label><input type="radio" name="activity" value="Alto" (change)="updateFilter('activity', 'Alto')"> Alto</label><br>
+      <label><input type="radio" name="activity" value="" (change)="updateFilter('activity', '')"> Todos</label>
+    </div>
+  </div>
+
+  <!-- Filtro por peso -->
+  <div class="filter-section">
+    <button type="button" (click)="toggle('weight')">Peso +</button>
+    <div *ngIf="expanded.weight" class="filter-group">
+      <label><input type="radio" name="weight" value="Ligero" (change)="updateFilter('weight', 'Ligero')"> Ligero</label><br>
+      <label><input type="radio" name="weight" value="Mediano" (change)="updateFilter('weight', 'Mediano')"> Mediano</label><br>
+      <label><input type="radio" name="weight" value="Pesado" (change)="updateFilter('weight', 'Pesado')"> Pesado</label><br>
+      <label><input type="radio" name="weight" value="" (change)="updateFilter('weight', '')"> Todos</label>
+    </div>
+  </div>
+
+  <!-- Filtro por tamaño -->
+  <div class="filter-section">
+    <button type="button" (click)="toggle('size')">Tamaño +</button>
+    <div *ngIf="expanded.size" class="filter-group">
+      <label><input type="radio" name="size" value="Pequeño" (change)="updateFilter('size', 'Pequeño')"> Pequeño</label><br>
+      <label><input type="radio" name="size" value="Mediano" (change)="updateFilter('size', 'Mediano')"> Mediano</label><br>
+      <label><input type="radio" name="size" value="Grande" (change)="updateFilter('size', 'Grande')"> Grande</label><br>
+      <label><input type="radio" name="size" value="" (change)="updateFilter('size', '')"> Todos</label>
+    </div>
+  </div>
+
+  <!-- Filtro por largo de pelo -->
+  <div class="filter-section">
+    <button type="button" (click)="toggle('hair')">Largo de pelo +</button>
+    <div *ngIf="expanded.hair" class="filter-group">
+      <label><input type="radio" name="hair" value="Corto" (change)="updateFilter('hair', 'Corto')"> Corto</label><br>
+      <label><input type="radio" name="hair" value="Mediano" (change)="updateFilter('hair', 'Mediano')"> Mediano</label><br>
+      <label><input type="radio" name="hair" value="Largo" (change)="updateFilter('hair', 'Largo')"> Largo</label><br>
+      <label><input type="radio" name="hair" value="" (change)="updateFilter('hair', '')"> Todos</label>
+    </div>
+  </div>
+
+  <!-- Filtro por sexo -->
+  <div class="filter-section">
+    <button type="button" (click)="toggle('gender')">Sexo +</button>
+    <div *ngIf="expanded.gender" class="filter-group">
+      <label>
+        <input type="radio" name="gender" value="Macho" (change)="updateFilter('gender', 'Macho')" />
+        Macho
+      </label><br>
+      <label>
+        <input type="radio" name="gender" value="Hembra" (change)="updateFilter('gender', 'Hembra')" />
+        Hembra
+      </label><br>
+      <label>
+        <input type="radio" name="gender" value="" (change)="updateFilter('gender', '')" />
+        Todos
+      </label>
+    </div>
+  </div>
+
+  <!-- Filtro por edad -->
+  <div class="filter-section">
+    <button type="button" (click)="toggle('age')">Edad +</button>
+    <div *ngIf="expanded.age" class="filter-group">
+      <label>
+        <input type="radio" name="age" value="Cachorro" (change)="updateFilter('age', 'Cachorro')" />
+        Cachorro
+      </label><br>
+      <label>
+        <input type="radio" name="age" value="Adulto" (change)="updateFilter('age', 'Adulto')" />
+        Adulto
+      </label><br>
+      <label>
+        <input type="radio" name="age" value="Mayor" (change)="updateFilter('age', 'Mayor')" />
+        Mayor
+      </label><br>
+      <label>
+        <input type="radio" name="age" value="" (change)="updateFilter('age', '')" />
+        Todos
+      </label>
+    </div>
+  </div>
+
+  <!-- Botón para limpiar todos los filtros -->
+  <button class="clear-btn" (click)="clearFilters()">Limpiar filtros</button>
+</div>

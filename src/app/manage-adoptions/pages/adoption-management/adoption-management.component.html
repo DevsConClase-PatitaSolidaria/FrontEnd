@@ -1,0 +1,17 @@
+<h2>{{ 'title' | translate }}</h2>
+
+<div class="filter-container">
+  <label for="statusFilterDropdown">{{ 'filter.title' | translate }}</label>
+  <div class="status-dropdown-wrapper">
+    <select id="statusFilterDropdown" class="status-dropdown" [(ngModel)]="statusFilter">
+      <option value="todos">{{ 'filter.all' | translate }}</option>
+      <option value="pendiente">{{ 'filter.pending' | translate }}</option>
+      <option value="aceptada">{{ 'filter.accepted' | translate }}</option>
+      <option value="rechazada">{{ 'filter.rejected' | translate }}</option>
+    </select>
+  </div>
+</div>
+
+<div *ngIf="isLoading" class="spinner">{{ 'loading' | translate }}</div>
+
+<app-adoption-detail *ngFor="let req of filteredRequests" [request]="req"></app-adoption-detail>

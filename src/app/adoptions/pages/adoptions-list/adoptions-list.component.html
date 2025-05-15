@@ -1,0 +1,52 @@
+<!--
+  Autor: @leccapedro
+  Descripción: Vista principal de la sección de adopciones.
+  Contiene panel de filtros, barra de búsqueda, selector de ordenamiento y listado de mascotas.
+-->
+
+<div class="adoptions-container">
+  <!-- Panel lateral con filtros -->
+  <aside class="filters-panel">
+    <app-adoption-filters (filtersChanged)="applyFilters($event)"></app-adoption-filters>
+  </aside>
+
+  <!-- Sección principal con búsqueda, ordenamiento y tarjetas -->
+  <main class="pets-list">
+
+    <!-- Campo de búsqueda por nombre -->
+    <input
+      type="text"
+      placeholder="Buscar por nombre..."
+      [(ngModel)]="search"
+      class="search-input"
+    />
+
+    <!-- Selector para ordenar el listado -->
+    <div class="sort-bar">
+      <label for="sortSelect">Ordenar por:</label>
+      <select id="sortSelect" [(ngModel)]="sortOption" (change)="applySort()">
+        <option value="">-- Seleccionar --</option>
+        <option value="name-asc">Nombre (A-Z)</option>
+        <option value="name-desc">Nombre (Z-A)</option>
+        <option value="age-asc">Edad (menor a mayor)</option>
+        <option value="age-desc">Edad (mayor a menor)</option>
+      </select>
+    </div>
+
+    <!-- Mensaje si no hay mascotas disponibles -->
+    <div *ngIf="!loading && pets.length === 0">
+      No hay mascotas disponibles.
+    </div>
+
+    <!-- Tarjetas de mascotas filtradas -->
+    <div *ngIf="!loading && pets.length > 0" class="cards-grid">
+      <app-adoption-card
+        *ngFor="let pet of pets | petNameFilter:search"
+        [pet]="pet">
+      </app-adoption-card>
+    </div>
+
+    <!-- Indicador de carga -->
+    <div *ngIf="loading">Cargando mascotas...</div>
+  </main>
+</div>
