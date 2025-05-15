@@ -22,7 +22,11 @@ export const routes: Routes = [
   { path: 'publications', component: PublicationsDashboardComponent, canActivate: [authenticationGuard] },
   { path: 'manage-adoptions', component: AdoptionManagementComponent, canActivate: [authenticationGuard] },
 */
-  { path: 'adoptions', component: AdoptionsListComponent},
+  { path: 'adoptions', component: AdoptionsListComponent },
+  {
+    path: 'adoptions/:id',
+    loadComponent: () => import('./adoptions/pages/adoption-details/adoption-details.component').then(m => m.AdoptionDetailsComponent)
+  },
   { path: 'donations', component: DonationOptionsComponent },
   { path: 'profile', component: ProfilePageComponent},
   { path: 'publications', component: PublicationsDashboardComponent},
