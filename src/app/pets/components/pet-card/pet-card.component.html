@@ -1,17 +1,18 @@
+
 <div class="pet-card" [ngClass]="{'processing': isProcessing}">
   <div class="status-indicator" [class]="getStatusBadgeClass()">
-    {{ ('pets.filter.' + pet.status) | translate }}
+    {{ ('ADOPTION_MANAGEMENT.pets.filter.' + pet.status) | translate }}
   </div>
 
-  <img [src]="pet.photo" [alt]="'pet.photoAlt' | translate: {name: pet.name}" class="pet-image">
+  <img [src]="pet.photo" [alt]="'ADOPTION_MANAGEMENT.pet.photoAlt' | translate: {name: pet.name}" class="pet-image">
 
   <div class="pet-info">
     <h3>{{ pet.name }}</h3>
-    <p>{{ pet.breed }} • {{ pet.age }} {{ 'pet.yearsOld' | translate }}</p>
+    <p>{{ pet.breed }} • {{ pet.age }} {{ 'ADOPTION_MANAGEMENT.pet.yearsOld' | translate }}</p>
   </div>
 
   <button (click)="openDetails()" [disabled]="isProcessing">
-    {{ 'pet.buttons.details' | translate }}
+    {{ 'ADOPTION_MANAGEMENT.pet.buttons.details' | translate }}
   </button>
 
   <!-- Modal de detalles -->
@@ -21,21 +22,20 @@
       <img [src]="pet.photo" [alt]="pet.name" class="pet-modal-image">
       <p><strong>Raza:</strong> {{ pet.breed }}</p>
       <p><strong>Edad:</strong> {{ pet.age }} años</p>
-      <p><strong>Descripción:</strong> {{ pet.description || 'No hay descripción adicional' }}</p>
+      <p><strong>Descripción:</strong> {{ pet.description || 'ADOPTION_MANAGEMENT.pet.descriptionEmpty' | translate }}</p>
 
       <div class="modal-buttons">
-        <!-- Botón "Ir a adoptar" -->
+        <!-- Botón "{{ 'ADOPTION_MANAGEMENT.actions.accept' | translate }}" -->
         <button [routerLink]="'/adoptions'" class="adopt-link">
-          Ir a adoptar
+          {{ 'ADOPTION_MANAGEMENT.actions.accept' | translate }}
         </button>
-        <!-- Botón "Cerrar" -->
+        <!-- Botón "{{ 'ADOPTION_MANAGEMENT.actions.close' | translate }}" -->
         <button (click)="closeDetails()" class="btn-close">
-          Cerrar
+          {{ 'ADOPTION_MANAGEMENT.actions.close' | translate }}
         </button>
       </div>
     </div>
   </div>
-
 
   <!-- Modal de confirmación -->
   <div *ngIf="showConfirmation" class="confirmation-modal" [class]="modalAnimation">
