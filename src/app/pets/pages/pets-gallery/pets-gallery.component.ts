@@ -1,19 +1,19 @@
 import { Component, OnInit } from '@angular/core';
 import { Pet } from '../../model/pet.entity';
-import { PetsService } from '../../services/pets.service'; // Corregido el nombre del servicio
+import { PetsService } from '../../services/pets.service';
 import { FormsModule } from '@angular/forms';
-import { TranslatePipe } from '@ngx-translate/core';
+import { TranslateModule } from '@ngx-translate/core';
 import { PetCardComponent } from '../../components/pet-card/pet-card.component';
 import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-pets-gallery',
-  standalone: true, // Añadido para componentes independientes
+  standalone: true,
   templateUrl: './pets-gallery.component.html',
   styleUrls: ['./pets-gallery.component.css'],
   imports: [
-    CommonModule, // Necesario para directivas estructurales
-    TranslatePipe,
+    CommonModule,
+    TranslateModule,
     PetCardComponent,
     FormsModule
   ]
