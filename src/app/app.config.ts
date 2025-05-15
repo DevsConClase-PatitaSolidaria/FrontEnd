@@ -1,17 +1,17 @@
 import { ApplicationConfig, provideZoneChangeDetection } from '@angular/core';
 import { provideRouter } from '@angular/router';
-import { routes } from './app.routes';
-
-import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
-import { provideHttpClient, HttpClient, withInterceptors } from '@angular/common/http';
+import { withInterceptors } from "@angular/common/http";
 import { authenticationInterceptor } from "./iam/services/authentication.interceptor";
+import { routes } from './app.routes';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
+import { HttpClient, provideHttpClient } from "@angular/common/http";
 import { importProvidersFrom } from '@angular/core';
-import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
-import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { TranslateLoader, TranslateModule } from "@ngx-translate/core";
+import { TranslateHttpLoader } from "@ngx-translate/http-loader";
 
 export function HttpLoaderFactory(http: HttpClient) {
-  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+  return new TranslateHttpLoader(http, './assets/locales/', '.json');
 }
 
 export const appConfig: ApplicationConfig = {
@@ -19,17 +19,18 @@ export const appConfig: ApplicationConfig = {
     provideZoneChangeDetection({ eventCoalescing: true }),
     provideRouter(routes),
     provideAnimationsAsync(),
-    provideHttpClient(withInterceptors([authenticationInterceptor])),
+    provideHttpClient(),
 
     importProvidersFrom(
       TranslateModule.forRoot({
-        defaultLanguage: 'en',
         loader: {
           provide: TranslateLoader,
           useFactory: HttpLoaderFactory,
           deps: [HttpClient]
         }
       })
-    )
+    ),
+
+    provideHttpClient(withInterceptors([authenticationInterceptor])),
   ]
 };
