@@ -8,6 +8,7 @@
 import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { TranslateModule } from '@ngx-translate/core';
 import { AdoptionEntity } from '../../model/adoption.entity';
 
 @Component({
@@ -15,8 +16,9 @@ import { AdoptionEntity } from '../../model/adoption.entity';
   selector: 'app-adoption-card',
   templateUrl: './adoption-card.component.html',
   styleUrls: ['./adoption-card.component.css'],
-  imports: [CommonModule, RouterModule]
+    imports: [CommonModule, RouterModule, TranslateModule]
 })
+
 export class AdoptionCardComponent {
   /**
    * Recibe los datos de una mascota a mostrar en la tarjeta.
