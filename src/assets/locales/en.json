@@ -74,5 +74,81 @@
     "SORT_AGE_DESC": "Age (oldest first)",
     "NO_PETS": "No pets available.",
     "LOADING": "Loading pets..."
+  },
+
+  "ADOPTION_MANAGEMENT": {
+    "title": "Adoption Requests",
+    "loading": "Loading requests...",
+    "filter": {
+      "title": "Filter by",
+      "all": "All",
+      "pending": "Pending",
+      "accepted": "Accepted",
+      "rejected": "Rejected"
+    },
+
+    "actions": {
+      "accept": "Accept",
+      "reject": "Reject",
+      "details": "Details",
+      "close": "Close",
+      "cancel": "Cancel"
+    },
+
+    "labels": {
+      "status": "Status",
+      "reason": "Reason",
+      "pet": "Pet",
+      "age": "Age",
+      "name": "Name",
+      "birthDate": "Birth Date",
+      "email": "Email",
+      "dni": "DNI",
+      "location": "Location",
+      "maritalStatus": "Marital Status",
+      "hasChildren": "Has children?",
+      "livesWithParents": "Lives with parents?",
+      "economicStatus": "Economic status",
+      "phone": "Phone number",
+      "petExperience": "Has or had pets?"
+    },
+
+    "status": {
+      "pendiente": "Pending",
+      "aceptada": "Accepted",
+      "rechazada": "Rejected"
+    },
+
+    "confirm": {
+      "acceptTitle": "Confirm Adoption",
+      "acceptMsg": "Are you sure you want to accept this adopter?",
+      "rejectTitle": "Confirm Rejection",
+      "rejectMsg": "Are you sure you want to reject this adopter?"
+    },
+
+    "pet": {
+      "buttons": {
+        "details": "View details"
+      },
+
+      "photoAlt": "Photo of {{name}}",
+      "yearsOld": "years old",
+      "descriptionEmpty": "No additional description available"
+    },
+
+    "pets": {
+      "title": "Adopt a friend",
+      "filter": {
+        "title": "Filter by status",
+        "ariaLabel": "Select pet status",
+        "all": "All",
+        "available": "Available",
+        "adopted": "Adopted",
+        "pending": "Pending"
+      },
+
+      "loading": "Loading pets...",
+      "empty": "No pets found."
+    }
   }
 }
