@@ -150,5 +150,38 @@
       "loading": "Loading pets...",
       "empty": "No pets found."
     }
+  },
+
+  "DONATION_CARD": {
+    "donationNumber": "Donation number:",
+    "contact": "Contact:",
+    "location": "Location:",
+    "donate": "Donate",
+    "cancel": "Cancel",
+    "form": {
+      "amount": "Amount to donate:",
+      "placeholderAmount": "S/.",
+      "method": "Payment method:",
+      "operationNumber": "Transaction number:",
+      "operationPlaceholder": "e.g. 23453564",
+      "name": "Name:",
+      "namePlaceholder": "Your name",
+      "confirm": "Confirm donation",
+      "methods": {
+        "yape": "Yape",
+        "plin": "Plin",
+        "transfer": "Bank transfer"
+      }
+    }
+  },
+
+  "DONATION_OPTIONS": {
+    "headerUser": "Donation options",
+    "descriptionUser": "You can support shelters through monetary or physical donations.",
+    "headerRefuge": "Your active campaigns",
+    "descriptionRefuge": "These are your current publications connected to your profile.",
+    "back": "← Back",
+    "supportMoney": "Support monetarily",
+    "supportGoods": "Support with physical donations"
   }
 }
