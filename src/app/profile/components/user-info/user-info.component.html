@@ -8,8 +8,8 @@
 
   <!-- Información básica -->
   <div class="user-info">
-    <p><strong>📍 Ubicación:</strong> {{ user.address }}, Lima</p>
-    <p><strong>✉️ Email:</strong> {{ user.email }}</p>
+    <p><strong>📍 {{ 'USER_PROFILE.location' | translate }}:</strong> {{ user.address }}, Lima</p>
+    <p><strong>✉️ {{ 'USER_PROFILE.email' | translate }}:</strong> {{ user.email }}</p>
 
     <!-- Bio solo si existe -->
     <p *ngIf="user.bio" class="user-bio">{{ user.bio }}</p>
@@ -17,7 +17,7 @@
 
   <!-- Preferencias mejoradas -->
   <div class="preferences" *ngIf="user.preferences?.length">
-    <h4>🔍 Busca/Ofrece:</h4>
+    <h4>🔍 {{ 'USER_PROFILE.lookingFor' | translate }}</h4>
     <div class="preferences-container">
       <span class="preference-tag" *ngFor="let pref of user.preferences">
         {{ pref }}
@@ -27,18 +27,18 @@
 
   <!-- Campos específicos por rol -->
   <div class="role-specific" *ngIf="user.role === 'refugio'">
-    <p><strong>🏠 Capacidad:</strong> {{ user.capacity }} animales</p>
-    <p><strong>🐾 Disponibles:</strong> {{ user.animalsAvailable }}</p>
+    <p><strong>🏠 {{ 'USER_PROFILE.capacity' | translate }}:</strong> {{ user.capacity }} animales</p>
+    <p><strong>🐾 {{ 'USER_PROFILE.available' | translate }}:</strong> {{ user.animalsAvailable }}</p>
   </div>
 
   <div class="role-specific" *ngIf="user.role === 'adoptante'">
-    <p><strong>🏡 Tipo de vivienda:</strong> {{ user.homeType }}</p>
-    <p><strong>📌 Experiencia previa:</strong> {{ user.previousExperience || 'Ninguna' }}</p>
+    <p><strong>🏡 {{ 'USER_PROFILE.homeType' | translate }}:</strong> {{ user.homeType }}</p>
+    <p><strong>📌 {{ 'USER_PROFILE.previousExperience' | translate }}:</strong> {{ user.previousExperience || ('USER_PROFILE.none' | translate) }}</p>
   </div>
 
   <!-- Notificaciones -->
   <div class="notifications" *ngIf="user.notifications?.length">
-    <h4>🔔 Notificaciones:</h4>
+    <h4>🔔 {{ 'USER_PROFILE.notifications' | translate }}</h4>
     <div class="notification-item" *ngFor="let notif of user.notifications">
       <p>{{ notif }}</p>
     </div>
@@ -46,7 +46,7 @@
 
   <!-- Métodos de pago -->
   <div class="payment-methods" *ngIf="user.paymentMethods?.length">
-    <h4>💳 Acepta:</h4>
+    <h4>💳 {{ 'USER_PROFILE.paymentMethods' | translate }}</h4>
     <div class="methods-container">
       <span class="method-tag" *ngFor="let method of user.paymentMethods">
         {{ method }}
