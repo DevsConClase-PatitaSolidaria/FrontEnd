@@ -150,5 +150,38 @@
       "loading": "Cargando mascotas...",
       "empty": "No se encontraron mascotas."
     }
+  },
+
+  "DONATION_CARD": {
+    "donationNumber": "Número para donaciones:",
+    "contact": "Contacto:",
+    "location": "Ubicación:",
+    "donate": "Donar",
+    "cancel": "Cancelar",
+    "form": {
+      "amount": "Monto a donar:",
+      "placeholderAmount": "S/.",
+      "method": "Método de pago:",
+      "operationNumber": "Número de operación realizada:",
+      "operationPlaceholder": "Ej. 23453564",
+      "name": "Nombre:",
+      "namePlaceholder": "Tu nombre",
+      "confirm": "Confirmar donación",
+      "methods": {
+        "yape": "Yape",
+        "plin": "Plin",
+        "transfer": "Transferencia"
+      }
+    }
+  },
+
+  "DONATION_OPTIONS": {
+    "headerUser": "Opciones para donar",
+    "descriptionUser": "Puedes colaborar con refugios mediante donaciones monetarias o donaciones físicas.",
+    "headerRefuge": "Tus campañas activas",
+    "descriptionRefuge": "Estas son tus publicaciones actuales conectadas a tu perfil.",
+    "back": "← Volver",
+    "supportMoney": "Apoyar monetariamente",
+    "supportGoods": "Apoyar con donaciones físicas"
   }
 }
