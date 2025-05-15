@@ -1,18 +1,20 @@
 <div class="donations-wrapper">
   <!-- Encabezado y descripción SOLO si no hay tipo seleccionado -->
   <div *ngIf="!selectedType && userRole !== 'refugio'" class="intro">
-    <h2>Opciones para donar</h2>
-    <p>Puedes colaborar con refugios mediante donaciones monetarias o donaciones físicas.</p>
+    <h2>{{ 'DONATION_OPTIONS.headerUser' | translate }}</h2>
+    <p>{{ 'DONATION_OPTIONS.descriptionUser' | translate }}</p>
   </div>
 
   <div *ngIf="userRole === 'refugio'" class="intro">
-    <h2>Tus campañas activas</h2>
-    <p>Estas son tus publicaciones actuales conectadas a tu perfil.</p>
+    <h2>{{ 'DONATION_OPTIONS.headerRefuge' | translate }}</h2>
+    <p>{{ 'DONATION_OPTIONS.descriptionRefuge' | translate }}</p>
   </div>
 
-  <!-- Botón volver alineado a la izquierda solo cuando se está viendo donaciones por tipo -->
+  <!-- Botón volver -->
   <div *ngIf="userRole !== 'refugio' && selectedType" class="back-button-container">
-    <button class="back-button" (click)="resetSelection()">← Volver</button>
+    <button class="back-button" (click)="resetSelection()">
+      {{ 'DONATION_OPTIONS.back' | translate }}
+    </button>
   </div>
 
   <!-- Campañas del refugio -->
@@ -26,8 +28,12 @@
 
   <!-- Botones para elegir tipo de donación -->
   <div *ngIf="userRole !== 'refugio' && !selectedType" class="donation-type-buttons">
-    <button (click)="selectedType = 'monetaria'">Apoyar monetariamente</button>
-    <button (click)="selectedType = 'especie'">Apoyar con donaciones físicas</button>
+    <button (click)="selectedType = 'monetaria'">
+      {{ 'DONATION_OPTIONS.supportMoney' | translate }}
+    </button>
+    <button (click)="selectedType = 'especie'">
+      {{ 'DONATION_OPTIONS.supportGoods' | translate }}
+    </button>
   </div>
 
   <!-- Donaciones filtradas según tipo seleccionado -->
@@ -39,7 +45,3 @@
     </app-donation-card>
   </div>
 </div>
-
-
-
-
