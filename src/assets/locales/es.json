@@ -87,45 +87,6 @@
       "rejected": "Rechazada"
     },
 
-    "actions": {
-      "accept": "Aceptar",
-      "reject": "Rechazar",
-      "details": "Detalles",
-      "close": "Cerrar",
-      "cancel": "Cancelar"
-    },
-
-    "labels": {
-      "status": "Estado",
-      "reason": "Motivo",
-      "pet": "Mascota",
-      "age": "Edad",
-      "name": "Nombre",
-      "birthDate": "Fecha de nacimiento",
-      "email": "Correo",
-      "dni": "DNI",
-      "location": "Ubicación",
-      "maritalStatus": "Situación sentimental",
-      "hasChildren": "¿Tiene hijos?",
-      "livesWithParents": "¿Vive con sus padres?",
-      "economicStatus": "Situación económica",
-      "phone": "Número de contacto",
-      "petExperience": "¿Ha tenido o tiene mascotas?"
-    },
-
-    "status": {
-      "pendiente": "Pendiente",
-      "aceptada": "Aceptada",
-      "rechazada": "Rechazada"
-    },
-
-    "confirm": {
-      "acceptTitle": "Confirmar Adopción",
-      "acceptMsg": "¿Estás seguro de aceptar a este adoptante?",
-      "rejectTitle": "Confirmar Rechazo",
-      "rejectMsg": "¿Estás seguro de rechazar a este adoptante?"
-    },
-
     "pet": {
       "buttons": {
         "details": "Ver detalles"
@@ -183,5 +144,64 @@
     "back": "← Volver",
     "supportMoney": "Apoyar monetariamente",
     "supportGoods": "Apoyar con donaciones físicas"
+  },
+
+  "MANAGE_ADOPTIONS": {
+    "actions": {
+      "accept": "Aceptar",
+      "reject": "Rechazar",
+      "details": "Detalles",
+      "close": "Cerrar",
+      "cancel": "Cancelar"
+    },
+
+    "labels": {
+      "status": "Estado",
+      "reason": "Motivo",
+      "pet": "Mascota",
+      "age": "Edad",
+      "name": "Nombre",
+      "birthDate": "Fecha de nacimiento",
+      "email": "Correo",
+      "dni": "DNI",
+      "location": "Ubicación",
+      "maritalStatus": "Situación sentimental",
+      "hasChildren": "¿Tiene hijos?",
+      "livesWithParents": "¿Vive con sus padres?",
+      "economicStatus": "Situación económica",
+      "phone": "Número de contacto",
+      "petExperience": "¿Ha tenido o tiene mascotas?"
+    },
+
+    "status": {
+      "pendiente": "Pendiente",
+      "aceptada": "Aceptada",
+      "rechazada": "Rechazada"
+    },
+
+    "confirm": {
+      "acceptTitle": "Confirmar Adopción",
+      "acceptMsg": "¿Estás seguro de aceptar a este adoptante?",
+      "rejectTitle": "Confirmar Rechazo",
+      "rejectMsg": "¿Estás seguro de rechazar a este adoptante?"
+    }
+  },
+
+  "USER_PROFILE": {
+    "title": "Perfiles de Usuarios",
+    "location": "Ubicación",
+    "email": "Correo",
+    "lookingFor": "Busca/Ofrece:",
+    "capacity": "Capacidad",
+    "available": "Disponibles",
+    "homeType": "Tipo de vivienda",
+    "previousExperience": "Experiencia previa",
+    "none": "Ninguna",
+    "notifications": "Notificaciones",
+    "paymentMethods": "Acepta"
+  },
+
+  "HEADER": {
+    "home": "Inicio"
   }
 }
