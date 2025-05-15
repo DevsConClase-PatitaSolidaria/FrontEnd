@@ -57,9 +57,9 @@
       "title": "Filtrar por estado",
       "ariaLabel": "Seleccionar estado de mascota",
       "all": "Todos",
-      "available": "Disponibles",
-      "adopted": "Adoptados",
-      "pending": "Pendientes"
+      "available": "Disponible",
+      "adopted": "Adoptado",
+      "pending": "Pendiente"
     },
     "loading": "Cargando mascotas...",
     "empty": "No se encontraron mascotas."

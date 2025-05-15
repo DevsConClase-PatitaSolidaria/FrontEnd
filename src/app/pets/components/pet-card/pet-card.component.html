@@ -1,6 +1,6 @@
 <div class="pet-card" [ngClass]="{'processing': isProcessing}">
   <div class="status-indicator" [class]="getStatusBadgeClass()">
-    {{ pet.status | translate }}
+    {{ ('pets.filter.' + pet.status) | translate }}
   </div>
 
   <img [src]="pet.photo" [alt]="'pet.photoAlt' | translate: {name: pet.name}" class="pet-image">
