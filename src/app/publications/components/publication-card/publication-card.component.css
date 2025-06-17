@@ -1,0 +1,39 @@
+.card {
+  background: #f1f5f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  padding: 20px 16px;
+  min-width: 240px;
+  max-width: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+}
+
+.card strong {
+  font-size: 1.2em;
+  color: #2563eb;
+}
+
+.card p {
+  margin: 6px 0;
+  color: #475569;
+}
+
+.card button {
+  background: #ef4444;
+  color: #fff;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  align-self: flex-end;
+  margin-top: 12px;
+  font-size: 0.95em;
+  transition: background 0.2s;
+}
+
+.card button:hover {
+  background: #dc2626;
+}

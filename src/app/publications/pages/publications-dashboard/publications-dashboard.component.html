@@ -1,0 +1,14 @@
+<h1>Gestión de Publicaciones</h1>
+<app-publication-form (add)="onAdd($event)"></app-publication-form>
+
+<div *ngIf="publications.length === 0" class="empty-message">
+  No hay publicaciones aún.
+</div>
+
+<div class="cards-container">
+  <app-publication-card
+    *ngFor="let pub of publications"
+    [publication]="pub"
+    (delete)="onDelete($event)">
+  </app-publication-card>
+</div>
