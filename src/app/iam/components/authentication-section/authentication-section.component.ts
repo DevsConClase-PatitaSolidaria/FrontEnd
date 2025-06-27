@@ -12,7 +12,7 @@ import { MatButton } from '@angular/material/button';
     MatButton
   ],
   templateUrl: './authentication-section.component.html',
-  styleUrls: ['./authentication-section.component.css']  // Corregido a styleUrls
+  styleUrls: ['./authentication-section.component.css']
 })
 export class AuthenticationSectionComponent {
 
