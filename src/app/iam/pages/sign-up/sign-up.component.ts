@@ -1,40 +1,50 @@
 import { Component, OnInit } from '@angular/core';
-import { BaseFormComponent } from "../../../shared/components/base-form.component";
-import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from "@angular/forms";
-import { AuthenticationService } from "../../services/authentication.service";
-import { SignUpRequest } from "../../model/sign-up.request";
-import { MatCard, MatCardContent, MatCardHeader, MatCardTitle } from "@angular/material/card";
-import { MatError, MatFormField } from "@angular/material/form-field";
-import { MatInput } from "@angular/material/input";
-import { MatButton } from "@angular/material/button";
-import { NgIf } from "@angular/common";
-import { AuthenticationSectionComponent } from "../../components/authentication-section/authentication-section.component";
+import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
+
+import { AuthenticationService } from '../../services/authentication.service';
+import { SignUpRequest } from '../../model/sign-up.request';
+import { BaseFormComponent } from '../../../shared/components/base-form.component';
+
+// Angular Material modules
+import { MatCardModule } from '@angular/material/card';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
+import { MatDividerModule } from '@angular/material/divider';
+
+import {RouterLink} from '@angular/router';
+import {TranslatePipe} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-sign-up',
   standalone: true,
   imports: [
-    MatCard,
-    MatCardHeader,
-    MatCardContent,
-    MatFormField,
+    CommonModule,
     ReactiveFormsModule,
-    MatInput,
-    MatButton,
-    MatCardTitle,
-    MatError,
-    NgIf,
-    AuthenticationSectionComponent // Import the AuthenticationSectionComponent here
+
+    // Angular Material modules
+    MatCardModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatButtonModule,
+    MatDividerModule,
+
+    // Custom component
+    RouterLink,
+    TranslatePipe,
   ],
   templateUrl: './sign-up.component.html',
   styleUrls: ['./sign-up.component.css']
 })
 export class SignUpComponent extends BaseFormComponent implements OnInit {
-
   form!: FormGroup;
   submitted = false;
 
-  constructor(private builder: FormBuilder, private authenticationService: AuthenticationService) {
+  constructor(
+    private builder: FormBuilder,
+    private authenticationService: AuthenticationService
+  ) {
     super();
   }
 
@@ -45,12 +55,12 @@ export class SignUpComponent extends BaseFormComponent implements OnInit {
     });
   }
 
-  onSubmit() {
+  onSubmit(): void {
     if (this.form.invalid) return;
-    let username = this.form.value.username;
-    let password = this.form.value.password;
-    const signUpRequest = new SignUpRequest(username, password);
-    this.authenticationService.signUp(signUpRequest);
+
+    const { username, password } = this.form.value;
+    const request = new SignUpRequest(username, password);
+    this.authenticationService.signUp(request);
     this.submitted = true;
   }
 }

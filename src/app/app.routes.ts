@@ -13,32 +13,29 @@ import { SignUpComponent } from './iam/pages/sign-up/sign-up.component'; // Ruta
 import { authenticationGuard } from './iam/services/authentication.guard'; // Guard para proteger rutas
 
 export const routes: Routes = [
-  { path: '', component: PetsGalleryComponent },
-  { path: 'pets', component: PetsGalleryComponent },
-  /*
+  { path: '', component: PetsGalleryComponent, canActivate: [authenticationGuard] },
+  { path: 'pets', component: PetsGalleryComponent, canActivate: [authenticationGuard] },
   { path: 'adoptions', component: AdoptionsListComponent, canActivate: [authenticationGuard] },
+  {
+    path: 'adoptions/:id',
+    loadComponent: () => import('./adoptions/pages/adoption-details/adoption-details.component')
+      .then(m => m.AdoptionDetailsComponent),
+    canActivate: [authenticationGuard]
+  },
   { path: 'donations', component: DonationOptionsComponent, canActivate: [authenticationGuard] },
   { path: 'profile', component: ProfilePageComponent, canActivate: [authenticationGuard] },
   { path: 'publications', component: PublicationsDashboardComponent, canActivate: [authenticationGuard] },
-  { path: 'manage-adoptions', component: AdoptionManagementComponent, canActivate: [authenticationGuard] },
-*/
-  { path: 'adoptions', component: AdoptionsListComponent },
-  {
-    path: 'adoptions/:id',
-    loadComponent: () => import('./adoptions/pages/adoption-details/adoption-details.component').then(m => m.AdoptionDetailsComponent)
-  },
-  { path: 'donations', component: DonationOptionsComponent },
-  { path: 'profile', component: ProfilePageComponent},
-  { path: 'publications', component: PublicationsDashboardComponent},
   {
     path: 'manage-adoptions',
     loadComponent: () => import('./manage-adoptions/pages/adoption-management/adoption-management.component')
-      .then(m => m.AdoptionManagementComponent)
+      .then(m => m.AdoptionManagementComponent),
+    canActivate: [authenticationGuard]
   },
 
+  // 🟢 Rutas públicas sin protección
   { path: 'sign-in', component: SignInComponent },
   { path: 'sign-up', component: SignUpComponent },
 
-  // Ruta para página no encontrada
+  // 🔴 Ruta para 404
   { path: '**', component: PageNotFoundComponent }
 ];
