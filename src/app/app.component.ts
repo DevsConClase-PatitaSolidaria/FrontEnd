@@ -42,16 +42,16 @@ export class AppComponent implements OnInit {
   @ViewChild(MatSidenav, { static: true }) sidenav!: MatSidenav;
 
   mainOptions = [
-    { path: '/authentication', title: 'Autenticación' }
+    { path: '/authentication', titleKey: 'HEADER.authentication' }
   ];
 
   secondaryOptions = [
-    { icon: 'https://cdn-icons-png.flaticon.com/512/616/616408.png', path: '/pets', title: 'Mascotas' },
-    { icon: 'https://cdn-icons-png.flaticon.com/512/5308/5308557.png', path: '/adoptions', title: 'Adopciones' },
-    { icon: 'https://cdn-icons-png.flaticon.com/512/11008/11008379.png', path: '/donations', title: 'Donaciones' },
-    { icon: 'https://cdn-icons-png.flaticon.com/512/3177/3177440.png', path: '/profile', title: 'Perfil' },
-    { icon: 'https://cdn-icons-png.flaticon.com/512/2680/2680900.png', path: '/publications', title: 'Publicaciones' },
-    { icon: 'https://cdn-icons-png.flaticon.com/512/3842/3842536.png', path: '/manage-adoptions', title: 'Gestión de Adopciones' }
+    { icon: 'https://cdn-icons-png.flaticon.com/512/616/616408.png', path: '/pets', titleKey: 'HEADER.pets' },
+    { icon: 'https://cdn-icons-png.flaticon.com/512/5308/5308557.png', path: '/adoptions', titleKey: 'HEADER.adoptions' },
+    { icon: 'https://cdn-icons-png.flaticon.com/512/11008/11008379.png', path: '/donations', titleKey: 'HEADER.donations' },
+    { icon: 'https://cdn-icons-png.flaticon.com/512/3177/3177440.png', path: '/profile', titleKey: 'HEADER.profile' },
+    { icon: 'https://cdn-icons-png.flaticon.com/512/2680/2680900.png', path: '/publications', titleKey: 'HEADER.publications' },
+    { icon: 'https://cdn-icons-png.flaticon.com/512/3842/3842536.png', path: '/manage-adoptions', titleKey: 'HEADER.manage_adoptions' }
   ];
 
   constructor(
